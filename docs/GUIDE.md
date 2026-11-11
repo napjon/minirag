@@ -152,7 +152,7 @@ The code follows the course's build steps, with the fictional bank in place of t
 | 12 A real service | `/ask`, `/feedback`, `/healthz`, `/readyz` | `minirag/app.py` |
 | 13 Private models | one interface, two providers | `minirag/llm.py` |
 
-Not included, on purpose: Level 11 (PostgreSQL as the vector store) and the Google product levels. With 41 chunks a NumPy array is enough, and this version uses no cloud service.
+Not included, on purpose: Level 11 (PostgreSQL as the vector store) and the levels about hosted cloud products. With 41 chunks a NumPy array is enough, and this version uses no cloud service.
 
 Differences from the course code that are worth knowing:
 
