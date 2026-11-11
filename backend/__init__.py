@@ -1,1 +1,0 @@
-"""Marketdesk backend package."""

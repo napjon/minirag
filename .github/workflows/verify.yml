@@ -7,30 +7,15 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: pgvector/pgvector:pg16
-        env:
-          POSTGRES_USER: verify
-          POSTGRES_PASSWORD: verify
-          POSTGRES_DB: minirag_test
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U verify -d minirag_test"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 20
     env:
-      CI: "true"
-      MARKETDESK_VERIFY_DATABASE_URL: postgresql+asyncpg://verify:verify@127.0.0.1:5432/minirag_test
+      PROVIDER: fixture
+      MINIRAG_NO_DOTENV: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: 1.3.14
-      - run: uv sync --extra dev --extra mcp
-      - run: scripts/verify.sh
+      - run: uv sync --extra dev
+      - run: uv run ruff check .
+      - run: uv run pytest -q
+      - run: uv run python evals/runner.py

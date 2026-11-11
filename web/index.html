@@ -1,13 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketdesk</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>minirag · policy assistant monitor</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><b>minirag</b><span>Corvane Bank · employee policy assistant</span></div>
+  <nav>
+    <a href="#/ask" data-tab="ask">Ask</a>
+    <a href="#/monitor" data-tab="monitor">Monitor</a>
+    <a href="#/evals" data-tab="evals">Evals</a>
+  </nav>
+  <div class="env" id="env"></div>
+</header>
+<main id="view"></main>
+<script src="/static/app.js"></script>
+</body>
 </html>

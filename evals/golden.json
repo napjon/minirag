@@ -1,0 +1,50 @@
+{
+  "about": "Golden set for the fictional bank policy assistant. `must` is the key value the answer has to contain, `docs`/`section` say where it lives, `evidence` is the exact corpus line (tests check it exists).",
+  "gates": {
+    "recall_at_k": 0.9,
+    "answer_accuracy": 0.8,
+    "refusal_rate": 0.9,
+    "false_refusal_rate_max": 0.1,
+    "groundedness": 0.95,
+    "trajectory_match": 0.9
+  },
+  "cases": [
+    {"id": "g01", "type": "in_scope", "q": "How many days of annual leave do full-time employees get?", "must": "22", "docs": ["hr-01"], "section": "Annual leave", "evidence": "Every full-time employee receives 22 days of paid annual leave per calendar year."},
+    {"id": "g02", "type": "in_scope", "q": "How many unused annual leave days can I carry over to next year?", "must": "5", "docs": ["hr-01"], "section": "Carry-over", "evidence": "You may carry over a maximum of 5 unused annual leave days into the next year."},
+    {"id": "g03", "type": "in_scope", "q": "When is a medical certificate required for sick leave?", "must": "3", "docs": ["hr-01"], "section": "Sick leave", "evidence": "A medical certificate is required when sick leave lasts longer than 3 consecutive days."},
+    {"id": "g04", "type": "in_scope", "q": "How many weeks of parental leave does the primary caregiver receive?", "must": "16", "docs": ["hr-01"], "section": "Parental leave", "evidence": "The primary caregiver receives 16 weeks of fully paid parental leave."},
+    {"id": "g05", "type": "in_scope", "q": "How many days per week must head office employees work from the office?", "must": "3", "docs": ["hr-02"], "section": "Office attendance", "evidence": "Head office employees must work from the office at least 3 days per week."},
+    {"id": "g06", "type": "in_scope", "q": "What are the core hours when every employee must be reachable?", "must": "10:00", "docs": ["hr-02"], "section": "Core hours", "evidence": "Core hours are 10:00 to 15:00, when every employee must be reachable."},
+    {"id": "g07", "type": "in_scope", "q": "What is the maximum number of working days I may work from abroad?", "must": "20", "docs": ["hr-02"], "section": "Working abroad", "evidence": "You may work from abroad for a maximum of 20 working days per calendar year."},
+    {"id": "g08", "type": "in_scope", "q": "How much is the one-off home office allowance for new hybrid employees?", "must": "400", "docs": ["hr-02"], "section": "Home office allowance", "evidence": "New hybrid employees receive a one-off home office allowance of USD 400."},
+    {"id": "g09", "type": "in_scope", "q": "Within how many days must expense claims be submitted?", "must": "30", "docs": ["fin-01"], "section": "Submitting a claim", "evidence": "Expense claims must be submitted within 30 days of the date of the expense."},
+    {"id": "g10", "type": "in_scope", "q": "What is the meal limit per day for international travel?", "must": "85", "docs": ["fin-01"], "section": "Meals", "evidence": "The meal limit is USD 85 per day for international travel."},
+    {"id": "g11", "type": "in_scope", "q": "What is the hotel limit per night in listed capital cities?", "must": "240", "docs": ["fin-01"], "section": "Hotels", "evidence": "In listed capital cities the hotel limit is USD 240 per night."},
+    {"id": "g12", "type": "in_scope", "q": "At what rate is private car mileage reimbursed per kilometre?", "must": "0.45", "docs": ["fin-01"], "section": "Mileage and corporate cards", "evidence": "Private car mileage is reimbursed at USD 0.45 per kilometre."},
+    {"id": "g13", "type": "in_scope", "q": "How many characters long must passwords be?", "must": "14", "docs": ["it-01"], "section": "Passwords and sign-in", "evidence": "Passwords must be at least 14 characters long."},
+    {"id": "g14", "type": "in_scope", "q": "How quickly must a lost or stolen device be reported to the Service Desk?", "must": "1 hour", "docs": ["it-01"], "section": "Devices", "evidence": "A lost or stolen device must be reported to the Service Desk within 1 hour."},
+    {"id": "g15", "type": "in_scope", "q": "How many data classification levels does the bank use?", "must": "4", "docs": ["it-01"], "section": "Data classification", "evidence": "The bank uses 4 data classification levels: Public, Internal, Confidential and Restricted."},
+    {"id": "g16", "type": "in_scope", "q": "How fast is the first response for a priority 1 incident?", "must": "15", "docs": ["it-02"], "section": "Response times", "evidence": "A priority 1 incident receives a first response within 15 minutes."},
+    {"id": "g17", "type": "in_scope", "q": "How often are laptops replaced?", "must": "4", "docs": ["it-02"], "section": "Equipment refresh", "evidence": "Laptops are replaced every 4 years."},
+    {"id": "g18", "type": "in_scope", "q": "What is the cash drawer limit for a teller?", "must": "5,000", "docs": ["ops-01"], "section": "Cash handling", "evidence": "The cash drawer limit for a teller is USD 5,000."},
+    {"id": "g19", "type": "in_scope", "q": "Within how many business days must a customer complaint be resolved?", "must": "15", "docs": ["ops-01"], "section": "Complaints", "evidence": "A customer complaint must be resolved within 15 business days."},
+    {"id": "g20", "type": "in_scope", "q": "What are the branch opening hours on Saturdays?", "must": "12:30", "docs": ["ops-01"], "section": "Branch hours", "evidence": "Branches are open from 09:00 to 12:30 on Saturdays."},
+    {"id": "g21", "type": "in_scope", "q": "How much is the annual learning budget for each employee?", "must": "1,500", "docs": ["hr-03"], "section": "Learning budget", "evidence": "Each employee has an annual learning budget of USD 1,500."},
+    {"id": "g22", "type": "in_scope", "q": "What is the highest gift value I may accept from a client or supplier?", "must": "75", "docs": ["hr-04"], "section": "Gifts and hospitality", "evidence": "You may accept a gift worth up to USD 75 from a client or supplier."},
+    {"id": "g23", "type": "in_scope", "q": "How long is the probation period for new employees?", "must": "6 months", "docs": ["hr-05"], "section": "Probation", "evidence": "The probation period is 6 months for all new employees."},
+    {"id": "g24", "type": "in_scope", "q": "What percentage of salary does the bank contribute to the pension plan?", "must": "8%", "docs": ["hr-05"], "section": "Pay and pension", "evidence": "The bank contributes 8% of your salary to the pension plan."},
+
+    {"id": "f01", "type": "follow_up", "q": "And the secondary caregiver?", "history": [{"role": "user", "text": "How many weeks of parental leave does the primary caregiver receive?"}, {"role": "assistant", "text": "The primary caregiver receives 16 weeks of fully paid parental leave."}], "must": "4 weeks", "docs": ["hr-01"], "section": "Parental leave", "evidence": "The secondary caregiver receives 4 weeks of fully paid parental leave."},
+    {"id": "f02", "type": "follow_up", "q": "And for domestic travel?", "history": [{"role": "user", "text": "What is the meal limit per day for international travel?"}, {"role": "assistant", "text": "The meal limit is USD 85 per day for international travel."}], "must": "60", "docs": ["fin-01"], "section": "Meals", "evidence": "The meal limit is USD 60 per day for domestic travel."},
+    {"id": "f03", "type": "follow_up", "q": "What about a priority 2 incident?", "history": [{"role": "user", "text": "How fast is the first response for a priority 1 incident?"}, {"role": "assistant", "text": "A priority 1 incident receives a first response within 15 minutes."}], "must": "4 hours", "docs": ["it-02"], "section": "Response times", "evidence": "A priority 2 incident receives a first response within 4 hours."},
+
+    {"id": "o01", "type": "out_of_scope", "q": "Who won the football world cup in 1998?"},
+    {"id": "o02", "type": "out_of_scope", "q": "Give me a recipe for fried rice with chicken."},
+    {"id": "o03", "type": "out_of_scope", "q": "What is the share price of the bank today?"},
+    {"id": "o04", "type": "out_of_scope", "q": "What will the weather be like in Lisbon tomorrow?"},
+    {"id": "o05", "type": "out_of_scope", "q": "Write a poem about autumn leaves falling."},
+    {"id": "o06", "type": "out_of_scope", "q": "Which mortgage interest rate does the bank offer customers?"},
+    {"id": "o07", "type": "out_of_scope", "q": "What is the salary of the chief executive?"},
+    {"id": "o08", "type": "out_of_scope", "q": "How do I reset the engine warning light on my car?"}
+  ]
+}
